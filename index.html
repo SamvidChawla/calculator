@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script>
+            var res='';
+            var ans;
+            function ansss(){
+                document.getElementById('anss').innerHTML=res;
+                ans=eval(res);
+                console.log(res);
+            }
+        </script>
+        <div style="background-color:#ffa82f">
+            <div class="tab"><p id='anss' style="color: white;"><span class="blink">|</span></p></div>
+            <div class="button">
+                <button onclick="res+=1;ansss();">1</button>
+                <button onclick="res+=2;ansss();">2</button>
+                <button onclick="res+=3;ansss();">3</button>
+            </div>
+            <div class="button">
+                <button onclick="res+=4;ansss();">4</button>
+                <button onclick="res+=5;ansss();">5</button>
+                <button onclick="res+=6;ansss();">6</button>
+            </div>
+            <div class="button">
+                <button onclick="res+=7;ansss();">7</button>
+                <button onclick="res+=8;ansss();">8</button>
+                <button onclick="res+=9;ansss();">9</button>
+            </div>
+            <div class="button">
+                <button onclick="res+='+';document.getElementById('anss').innerHTML=res;">+</button>
+                <button onclick="res+='-';document.getElementById('anss').innerHTML=res;">-</button>
+                <button onclick="res+=0;ansss();">0</button>
+            </div>
+            <div class="button">
+                <button onclick="res+='*';document.getElementById('anss').innerHTML=res;">*</button>
+                <button onclick="res+='/';document.getElementById('anss').innerHTML=res;">/</button>
+                <button onclick="document.getElementById('anss').innerHTML=ans;res=ans;">=</button>
+            </div>
+            <div class="button">
+                <button onclick="res=''; document.getElementById('anss').innerHTML='<span class=&quot;blink&quot;>|</span>';">AC</button>
+                <button onclick="res+='%';document.getElementById('anss').innerHTML=res;">%</button>
+                <button onclick="let len=res.length;res=res.slice(0,len-1);ansss();if (res===''){document.getElementById('anss').innerHTML='|'};">C</button>
+            </div>
+        </div>
+    </body>
+</html>
