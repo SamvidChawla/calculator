@@ -30,7 +30,7 @@
             <div class="button">
                 <button onclick="res+='*';document.getElementById('anss').innerHTML=res;">*</button>
                 <button onclick="res+='/';document.getElementById('anss').innerHTML=res;">/</button>
-                <button onclick="document.getElementById('anss').innerHTML=ans;res=ans;">=</button>
+                <button onclick="document.getElementById('anss').innerHTML=ans;res=String(ans);">=</button>
             </div>
             <div class="button">
                 <button onclick="res=''; document.getElementById('anss').innerHTML='<span class=&quot;blink&quot;>|</span>';">AC</button>
